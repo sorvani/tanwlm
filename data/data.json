@@ -496,6 +496,27 @@
     },
     {
       "id": "22",
+      "sex": "Boy 14",
+      "jp_family": "Hashimoto",
+      "jp_given": "",
+      "name": "Hashimoto",
+      "points": 150,
+      "status": "Alive",
+      "note": "Manga V2 C13",
+      "purchasedSkills": [
+        "Heroic Aptitude",
+        "Help Guide",
+        "Good Fortune"
+      ],
+      "currentSkills": [
+        "Heroic Aptitude",
+        "Help Guide",
+        "Good Fortune"
+      ],
+      "race": "Human"
+    },
+    {
+      "id": "23",
       "sex": "Unknown 1",
       "jp_family": "",
       "jp_given": "",
@@ -505,7 +526,7 @@
       "note": "Laffan"
     },
     {
-      "id": "23",
+      "id": "24",
       "sex": "Unknown 2",
       "jp_family": "",
       "jp_given": "",
@@ -515,7 +536,7 @@
       "note": "Laffan"
     },
     {
-      "id": "24",
+      "id": "25",
       "sex": "Unknown 3",
       "jp_family": "",
       "jp_given": "",
@@ -525,7 +546,7 @@
       "note": "Laffan"
     },
     {
-      "id": "25",
+      "id": "26",
       "sex": "Unknown 4",
       "jp_family": "",
       "jp_given": "",
@@ -535,7 +556,7 @@
       "note": "Sarstedt"
     },
     {
-      "id": "26",
+      "id": "27",
       "sex": "Unknown 5",
       "jp_family": "",
       "jp_given": "",
@@ -545,20 +566,8 @@
       "note": "Sarstedt"
     },
     {
-      "id": "27",
-      "sex": "Unknown 6",
-      "jp_family": "",
-      "jp_given": "",
-      "name": "",
-      "points": 0,
-      "status": "Unknown",
-      "note": ""
-    },
-    {
       "id": "28",
-      "sex": "Unknown 7",
-      "jp_family": "",
-      "jp_given": "",
+      "sex": "Unknown 6",
       "name": "",
       "points": 0,
       "status": "Unknown",
@@ -566,9 +575,7 @@
     },
     {
       "id": "29",
-      "sex": "Unknown 8",
-      "jp_family": "",
-      "jp_given": "",
+      "sex": "Unknown 7",
       "name": "",
       "points": 0,
       "status": "Unknown",
@@ -576,9 +583,7 @@
     },
     {
       "id": "30",
-      "sex": "Unknown 9",
-      "jp_family": "",
-      "jp_given": "",
+      "sex": "Unknown 8",
       "name": "",
       "points": 0,
       "status": "Unknown",
@@ -586,9 +591,7 @@
     },
     {
       "id": "31",
-      "sex": "Unknown 10",
-      "jp_family": "",
-      "jp_given": "",
+      "sex": "Unknown 9",
       "name": "",
       "points": 0,
       "status": "Unknown",
@@ -596,9 +599,7 @@
     },
     {
       "id": "32",
-      "sex": "Unknown 11",
-      "jp_family": "",
-      "jp_given": "",
+      "sex": "Unknown 10",
       "name": "",
       "points": 0,
       "status": "Unknown",
@@ -1074,6 +1075,13 @@
       "description": "",
       "hidden_info": "",
       "has_levels": true
+    },
+    {
+      "name": "Good Fortune",
+      "cost": 50,
+      "description": "Increases your luck.",
+      "hidden_info": "Events often turn in your favor.",
+      "has_levels": false
     },
     {
       "name": "Wealth",
