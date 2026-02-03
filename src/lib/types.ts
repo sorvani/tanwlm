@@ -20,6 +20,7 @@ export interface Skill {
   description: string;
   hidden_info?: string;
   has_levels?: boolean;
+  growth_type?: string;
 }
 
 export interface Race {

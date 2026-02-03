@@ -1,4 +1,5 @@
 import { getGameData } from '@/lib/data';
+import { calculateSkillCost } from '@/lib/game-mechanics';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -114,15 +115,9 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
 
                                     // Calculate Cost
                                     let totalCost = item.cost;
-                                    if (level && level > 1 && 'has_levels' in item && item.has_levels) {
-                                        for (let l = 2; l <= level; l++) {
-                                            if (l <= 3) totalCost += 5;
-                                            else if (l <= 5) totalCost += 10;
-                                            else if (l <= 7) totalCost += 15;
-                                            else if (l <= 9) totalCost += 20;
-                                            else if (l === 10) totalCost += 25;
-                                            else totalCost += 25;
-                                        }
+                                    // If it's a skill and has levels, use the mechanic
+                                    if ('has_levels' in item && item.has_levels && level) {
+                                        totalCost = calculateSkillCost(item as any, level);
                                     }
 
                                     return (
@@ -162,6 +157,6 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 }
