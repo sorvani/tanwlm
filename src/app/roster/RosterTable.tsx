@@ -59,7 +59,7 @@ export default function RosterTable({ roster }: RosterTableProps) {
         <div className="glass-panel" style={{ overflowX: 'auto', borderRadius: 'var(--radius-lg)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', borderRadius: 'inherit' }}>
                 <thead>
-                    <tr style={{ borderBottom: '1px solid var(--border-color)', textAlign: 'left' }}>
+                    <tr style={{ borderBottom: '1px solid var(--border-color)', textAlign: 'left', userSelect: 'none' }}>
                         <th onClick={() => requestSort('id')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}># {getSortIndicator('id')}</th>
                         <th onClick={() => requestSort('name')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Name {getSortIndicator('name')}</th>
                         <th onClick={() => requestSort('points')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Points {getSortIndicator('points')}</th>
