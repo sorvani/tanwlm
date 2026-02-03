@@ -20,10 +20,10 @@ Since your server supports Node.js 22.x, the best workflow is to push your code 
       ```
 
 > [!NOTE]
-> **Data Handling**: I have configured the app to use `data.seed.json`.
-> - The live `web/data/data.json` file is **ignored** by Git.
-> - On the first run, the app will create `data.json` from the seed.
-> - This means your server will have its own persistent data that won't be overwritten when you `git pull`.
+> **Data Handling**: The application now uses `data/data.json` directly as the source of truth.
+> - This file is **tracked in Git**.
+> - Any changes you make locally (like editing Nao's skills) should be committed and pushed.
+> - On the server, `git pull` will update the data.
 
 ## 2. Setup on Fedora Server
 

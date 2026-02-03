@@ -40,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# User Data (Local DB)
-data/data.json
+# User Data
+# data/data.json (Now tracked in git)
