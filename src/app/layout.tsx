@@ -43,16 +43,8 @@ export default async function RootLayout({
                   <li><Link href="/builder">Builder</Link></li>
                   <li>
                     {session ? (
-                      <form
-                        action={async () => {
-                          "use server";
-                          await signOut();
-                        }}
-                      >
-                        <button type="submit" style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', font: 'inherit', fontWeight: 500 }}>
-                          Logout
-                        </button>
-                      </form>
+                      // Logout hidden for now as per request
+                      null
                     ) : (
                       <form
                         action={async () => {
