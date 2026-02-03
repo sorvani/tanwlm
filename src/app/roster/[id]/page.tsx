@@ -22,82 +22,66 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                 </Link>
             </div>
 
-            <div className="glass-panel" style={{ padding: '2rem', marginBottom: '2rem' }}>
-                <header style={{ marginBottom: '2rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                        <div>
-                            <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'hsl(var(--text-primary))' }}>{student.name}</h1>
-                            <div style={{ color: 'hsl(var(--text-secondary))', fontSize: '1.2rem' }}>
-                                {student.jp_family} {student.jp_given}
+            <div className="glass-panel" style={{ padding: '0', marginBottom: '2rem', overflow: 'hidden' }}>
+                <div style={{ padding: '2rem', background: 'hsl(var(--bg-tertiary))', borderBottom: '1px solid var(--border-color)' }}>
+                    <h2 style={{ fontSize: '1.2rem', color: 'hsl(var(--accent-secondary))', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Status Screen</h2>
+                    <div style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '1rem', lineHeight: '1.6', color: 'hsl(var(--text-primary))' }}>
+                        <div style={{ marginBottom: '0.25rem' }}>Name: {student.name}</div>
+                        <div style={{ marginBottom: '0.25rem' }}>Race: {student.race || 'Unknown'} <span style={{ color: 'hsl(var(--text-secondary))' }}>(Age: {student.age || '?'})</span></div>
+                        <div style={{ marginBottom: '1rem' }}>Condition: <span style={{ color: student.condition === 'Healthy' ? 'hsl(var(--state-success))' : 'inherit' }}>{student.condition || student.status}</span></div>
+
+                        <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                            <span style={{ marginRight: '0.5rem', whiteSpace: 'nowrap' }}>Skills:</span>
+                            <div>
+                                {student.currentSkills && student.currentSkills.length > 0 ? (
+                                    <span>{student.currentSkills.join(', ')}</span>
+                                ) : (
+                                    <span style={{ color: 'hsl(var(--text-muted))' }}>None</span>
+                                )}
                             </div>
                         </div>
-                        <div style={{ textAlign: 'right' }}>
-                            <span style={{
-                                display: 'inline-block',
-                                padding: '0.25rem 0.75rem',
-                                borderRadius: 'var(--radius-full)',
-                                background: student.status === 'Alive' ? 'hsl(var(--state-success) / 0.2)' :
-                                    student.status === 'Dead' ? 'hsl(var(--state-danger) / 0.2)' : 'hsl(var(--bg-tertiary))',
-                                color: student.status === 'Alive' ? 'hsl(var(--state-success))' :
-                                    student.status === 'Dead' ? 'hsl(var(--state-danger))' : 'hsl(var(--text-muted))',
-                                fontWeight: 'bold'
-                            }}>
-                                {student.status}
-                            </span>
+                    </div>
+                </div>
+
+                <div style={{ padding: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
+                        <div>
+                            <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Full Name (JP)</h3>
+                            <p style={{ fontSize: '1.1rem' }}>{student.jp_family} {student.jp_given}</p>
+                        </div>
+                        <div>
+                            <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Initial Points</h3>
+                            <p style={{ fontSize: '1.1rem' }}>{student.points}</p>
+                        </div>
+                        <div>
+                            <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Notes</h3>
+                            <p style={{ lineHeight: '1.6', color: 'hsl(var(--text-secondary))' }}>{student.note || "No notes available."}</p>
                         </div>
                     </div>
-                </header>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
-                    <div>
-                        <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Sex</h3>
-                        <p style={{ fontSize: '1.1rem' }}>{student.sex}</p>
-                    </div>
-                    <div>
-                        <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Points</h3>
-                        <p style={{ fontSize: '1.1rem' }}>{student.points}</p>
-                    </div>
-                </div>
-
-                <div style={{ marginBottom: '2rem' }}>
-                    <h3 style={{ color: 'hsl(var(--text-muted))', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>Notes</h3>
-                    <p style={{ lineHeight: '1.6', color: 'hsl(var(--text-secondary))' }}>{student.note || "No notes available."}</p>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '3rem' }}>
-                    <div className="card" style={{ background: 'hsl(var(--bg-secondary))' }}>
-                        <h3 style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem', marginBottom: '1rem', color: 'hsl(var(--accent-primary))' }}>Purchased Skills</h3>
+                    <div style={{ marginTop: '2rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
+                        <h3 style={{ fontSize: '1.1rem', color: 'hsl(var(--accent-primary))', marginBottom: '1rem' }}>Purchased Race & Skills</h3>
                         {student.purchasedSkills && student.purchasedSkills.length > 0 ? (
-                            <ul style={{ listStyle: 'none' }}>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                 {student.purchasedSkills.map((skill: string, index: number) => (
-                                    <li key={index} style={{ marginBottom: '0.5rem', paddingLeft: '1rem', position: 'relative' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: 'hsl(var(--accent-primary))' }}>•</span>
+                                    <span key={index} style={{
+                                        background: 'hsl(var(--bg-primary))',
+                                        padding: '0.25rem 0.75rem',
+                                        borderRadius: '4px',
+                                        fontSize: '0.9rem',
+                                        border: '1px solid var(--border-color)'
+                                    }}>
                                         {skill}
-                                    </li>
+                                    </span>
                                 ))}
-                            </ul>
+                            </div>
                         ) : (
                             <p style={{ color: 'hsl(var(--text-muted))', fontStyle: 'italic' }}>None recorded.</p>
                         )}
                     </div>
-
-                    <div className="card" style={{ background: 'hsl(var(--bg-secondary))' }}>
-                        <h3 style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem', marginBottom: '1rem', color: 'hsl(var(--accent-secondary))' }}>Learned / Improved Skills</h3>
-                        {student.learnedSkills && student.learnedSkills.length > 0 ? (
-                            <ul style={{ listStyle: 'none' }}>
-                                {student.learnedSkills.map((skill: string, index: number) => (
-                                    <li key={index} style={{ marginBottom: '0.5rem', paddingLeft: '1rem', position: 'relative' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: 'hsl(var(--accent-secondary))' }}>•</span>
-                                        {skill}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p style={{ color: 'hsl(var(--text-muted))', fontStyle: 'italic' }}>None learned yet.</p>
-                        )}
-                    </div>
                 </div>
             </div>
+
         </div>
     );
 }

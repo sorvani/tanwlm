@@ -105,7 +105,23 @@
         "Level 1 Fire Magic",
         "Level 2 Time Magic"
       ],
-      "learnedSkills": []
+      "currentSkills": [
+        "Help Guide",
+        "Weapon Proficiency: Spears",
+        "Magic Aptitude: Time",
+        "Level 2 Spearmanship",
+        "Level 1 Evasion",
+        "Level 2 Robust",
+        "Level 1 Hawk’s Eye",
+        "Level 1 Stealth",
+        "Level 1 Traps and Snares 101",
+        "Level 2 Third Eye",
+        "Level 1 Fire Magic",
+        "Level 2 Time Magic"
+      ],
+      "race": "Elf",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "10",
