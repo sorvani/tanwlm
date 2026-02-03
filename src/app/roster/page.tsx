@@ -6,11 +6,8 @@ export default async function RosterPage() {
 
     return (
         <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+            <div style={{ marginBottom: '2rem' }}>
                 <h1 style={{ fontSize: '2.5rem' }}>Class Roster</h1>
-                <Link href="/builder" className="btn-primary">
-                    + Add Character
-                </Link>
             </div>
 
             <div className="glass-panel" style={{ overflowX: 'auto', borderRadius: 'var(--radius-lg)' }}>

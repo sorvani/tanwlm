@@ -7,6 +7,8 @@ export interface Character {
   points: number | string; // Sometimes "-" string in logic, but JSON has numbers or 0.
   status: string;
   note: string;
+  purchasedSkills?: string[];
+  learnedSkills?: string[];
 }
 
 export interface Skill {

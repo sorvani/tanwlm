@@ -78,8 +78,8 @@ Connect to your server via SSH:
 
 2.  **Install & Build**:
     ```bash
-    # Install dependencies
-    npm install
+    # Install dependencies (strictly from lockfile)
+    npm ci
     
     # Build the application
     npm run build
@@ -139,7 +139,7 @@ When you make changes locally and push them:
 # On Server:
 cd /opt/landmines
 git pull
-npm install  # only if dependencies changed
+npm ci    # Use 'ci' (Clean Install) to strictly follow lockfile without modifying it
 npm run build
 sudo systemctl restart landmines
 ```
