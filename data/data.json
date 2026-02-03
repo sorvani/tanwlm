@@ -1151,27 +1151,38 @@
     {
       "name": "Human",
       "cost": 0,
-      "description": "A race with average potential and abilities. (Cannot use magic if not born with magical aptitude.)"
+      "description": "A race with average potential and abilities.",
+      "hidden_info": "Cannot use magic if not born with magical aptitude."
     },
     {
       "name": "Elf",
       "cost": 20,
-      "description": "A race highly adept at magic, with a life span twice that of the average Human. (Can learn and use magic without expending additional points on magical aptitude, but has less physical strength than a Human.)"
+      "description": "A race highly adept at magic, with a life span twice that of the average Human.",
+      "hidden_info": "Can learn and use magic without expending additional points on magical aptitude, but has less physical strength than a Human."
     },
     {
       "name": "Dhamphir",
       "cost": 50,
-      "description": "A race of half-vampires endowed with strong and resilient bodies as well as an aptitude for magic. They possess an innate resistance towards light due to being half human. (Their lust for blood is stronger than that of pure-blooded vampires, and they thus require a daily sustenance of Human blood amounting to at least 400 cc. Most are unable to control their urges and end up draining the blood of their victims to the last drop. They are hunted down on sight due to the nature of their race.)"
+      "description": "A race of half-vampires endowed with strong and resilient bodies as well as an aptitude for magic. They possess an innate resistance towards light due to being half human.",
+      "hidden_info": "Their lust for blood is stronger than that of pure-blooded vampires, and they thus require a daily sustenance of Human blood amounting to at least 400 cc. Most are unable to control their urges and end up draining the blood of their victims to the last drop. They are hunted down on sight due to the nature of their race."
     },
     {
       "name": "Beastman",
       "cost": 20,
-      "description": "A race with animal traits (e.g. Wolf), improving physical abilities and senses."
+      "description": "",
+      "hidden_info": ""
     },
     {
       "name": "Dwarf",
       "cost": 20,
-      "description": "A race known for their craftsmanship and physical resilience."
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Vampire",
+      "cost": 160,
+      "description": "",
+      "hidden_info": ""
     }
   ]
 }
