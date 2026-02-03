@@ -1,37 +1,20 @@
-# Land Mines Web App Migration
+# Project Restoration & Deployment Walkthrough
 
-I have successfully converted the character tracker into a modern Next.js web application.
+## 1. Restoration Verification
+- **Project Structure**: Confirmed `src`, `data`, and `docs` folders are intact.
+- **Dependencies**: Successfully installed 390+ packages via `npm install`.
+- **Build**: `next build` executed successfully, generating the standalone application.
+- **Data Init**: Confirmed `data.json` is automatically created from `data.seed.json` if missing.
 
-## New Features
-- **Dashboard**: Overview of roster statistics and quick navigation.
-- **Roster View**: Detailed list of all characters with status indicators.
-- **Edit Characters**: Ability to update character details (Name, Status, Notes, etc.) via a responsive form.
-- **Skills Database**: Searchable grid view of all available skills.
-- **Character Builder**: Interactive tool to plan characters, calculating point costs for races and skills automatically.
-  - *New Feature*: "Finalize Character" button saves the build directly to the Roster!
+## 2. Deployment Guide Updates
+Based on real-world deployment to your Fedora server, we refined the [Deployment Guide](deployment_guide.md):
+- **User Setup**: Added specific instructions for creating the `landmines` user with a home directory (`-m`).
+- **Permissions**: Clarified `/opt/landmines` ownership.
+- **Micro-optimizations**: Removed incorrect `/web` subfolder references.
+- **Firewall**: Added `firewall-cmd` steps for port 3000.
+- **Startup**: Switched to `node .next/standalone/server.js` to match the `output: standalone` build config and resolve warnings.
 
-## Technical Details
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Vanilla CSS (Premium Dark Mode with Glassmorphism)
-- **Data**: JSON-based persistence (`web/data/data.json`).
-- **Type Safety**: Full TypeScript implementation.
-
-## How to Run
-
-1. Navigate to the `web` directory:
-   ```bash
-   cd web
-   ```
-2. Install dependencies (if not already):
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Next Steps
-- **Database**: For production hosting with multiple users, migrate `web/data/data.json` to a real database (Postgres/SQLite).
-- **Authentication**: Add login protection for the "Edit" and "Builder" features.
+## 3. Validation
+- **Status**: ✅ **SUCCESS**
+- **Verification**: User confirmed the site is running at `landmines.daerma.com` (screenshot provided).
+- **Core Features**: "Elysium" dashboard, stats, and navigation are visible.

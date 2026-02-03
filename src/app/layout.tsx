@@ -14,8 +14,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Elysium - Character Data",
-  description: "Character tracker and builder for To Another World! With Land Mines",
+  title: "Land Mines DB & Character Simulator",
+  description: "Character tracker and builder for To Another World... with Land Mines!",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
           <header className="main-header glass-panel">
             <div className="container header-content">
               <Link href="/" className="logo">
-                Elysium
+                Land Mines DB
               </Link>
               <nav>
                 <ul className="nav-links">
@@ -42,6 +42,11 @@ export default function RootLayout({
             </div>
           </header>
           <main>{children}</main>
+          <footer className="main-footer glass-panel">
+            <div className="container footer-content">
+              <p>Design &copy; {new Date().getFullYear()} J. Busch | All source data copyright of the original rights holders <Link href="/credits" className="hover-link">listed here</Link>.</p>
+            </div>
+          </footer>
         </div>
       </body>
     </html>

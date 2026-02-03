@@ -13,10 +13,13 @@ export default async function Home() {
     <div className="container">
       <section className="hero" style={{ textAlign: 'center', marginBottom: '4rem', marginTop: '2rem' }}>
         <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', background: 'linear-gradient(135deg, hsl(var(--text-primary)), hsl(var(--text-secondary)))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Elysium
+          Land Mines DB
         </h1>
+        <h2 style={{ fontSize: '1.5rem', color: 'hsl(var(--accent-primary))', marginBottom: '1.5rem', fontWeight: 'normal' }}>
+          & Character Simulator
+        </h2>
         <p style={{ fontSize: '1.25rem', color: 'hsl(var(--text-secondary))', maxWidth: '600px', margin: '0 auto' }}>
-          The comprehensive character tracker and builder for <em>To Another World! With Land Mines</em>.
+          The comprehensive character tracker and builder for <em>To Another World... with Land Mines!</em>
         </p>
       </section>
 
