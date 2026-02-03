@@ -331,12 +331,34 @@
     {
       "id": "11",
       "sex": "Boy 3",
-      "jp_family": "",
-      "jp_given": "Tomi",
+      "jp_family": "Wakabayashi",
+      "jp_given": "Yutaka",
       "name": "Tomi",
-      "points": 0,
+      "points": 120,
       "status": "Alive",
-      "note": "Blacksmith apprentice"
+      "note": "Blacksmith apprentice",
+      "purchasedSkills": [
+        "Dwarf Race",
+        "Craft Aptitude: Blacksmithing",
+        "Level 3 Blacksmithing",
+        "Level 3 Robust",
+        "Level 2 Enhanced Muscles",
+        "Level 2 Indomitable",
+        "Level 2 Appraisal",
+        "Drunkard"
+      ],
+      "currentSkills": [
+        "Craft Aptitude: Blacksmithing",
+        "Level 3 Blacksmithing",
+        "Level 3 Robust",
+        "Level 2 Enhanced Muscles",
+        "Level 2 Indomitable",
+        "Level 2 Appraisal",
+        "Drunkard"
+      ],
+      "race": "Dwarf",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "12",
@@ -344,9 +366,13 @@
       "jp_family": "Tanaka",
       "jp_given": "",
       "name": "Tanaka",
-      "points": 0,
+      "points": 80,
       "status": "Dead",
-      "note": "Heroic Aptitude"
+      "note": "Died 4 days after appearance",
+      "purchasedSkills": [
+        "Heroic Aptitude"
+      ],
+      "race": "Human"
     },
     {
       "id": "13",
@@ -354,9 +380,13 @@
       "jp_family": "Takahashi",
       "jp_given": "",
       "name": "Takahashi",
-      "points": 0,
+      "points": 80,
       "status": "Dead",
-      "note": "Mana Capacity Ultimate"
+      "note": "Died 4 days after appearance",
+      "purchasedSkills": [
+        "Mana Capacity: Ultimate"
+      ],
+      "race": "Human"
     },
     {
       "id": "14",
@@ -857,6 +887,13 @@
       "has_levels": false
     },
     {
+      "name": "Craft Aptitude: Blacksmithing",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
       "name": "Enhanced Mana Capacity",
       "cost": 10,
       "description": "Grants increased mana capacity.",
@@ -1025,6 +1062,20 @@
       "has_levels": true
     },
     {
+      "name": "Indomitable",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Enhanced Muscles",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
       "name": "Wealth",
       "cost": 5,
       "description": "Multiply your monetary assets by five.",
@@ -1080,6 +1131,11 @@
       "name": "Beastman",
       "cost": 20,
       "description": "A race with animal traits (e.g. Wolf), improving physical abilities and senses."
+    },
+    {
+      "name": "Dwarf",
+      "cost": 20,
+      "description": "A race known for their craftsmanship and physical resilience."
     }
   ]
 }
