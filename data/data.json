@@ -158,17 +158,51 @@
       "name": "Kaho",
       "points": 130,
       "status": "Alive",
-      "note": "Party: Jade Wings"
+      "note": "Party: Jade Wings",
+      "purchasedSkills": [
+        "Beastman Race",
+        "General Knowledge",
+        "Attractive Appearance",
+        "Weapon Proficiency: Greatswords",
+        "Level 8 Greatsword Fighting",
+        "Level 3 Peerless Strength"
+      ],
+      "currentSkills": [
+        "General Knowledge",
+        "Attractive Appearance",
+        "Weapon Proficiency: Greatswords",
+        "Level 8 Greatsword Fighting",
+        "Level 3 Peerless Strength"
+      ],
+      "race": "Beastman",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "6",
       "sex": "Girl 6",
-      "jp_family": "",
-      "jp_given": "Sae",
+      "jp_family": "Yamamura",
+      "jp_given": "Saeko",
       "name": "Sae",
       "points": 150,
       "status": "Alive",
-      "note": "Party: Jade Wings"
+      "note": "Party: Jade Wings",
+      "purchasedSkills": [
+        "Elf Race",
+        "Magic Aptitude: Fire",
+        "Magic Aptitude: Earth",
+        "Level 8 Fire Magic",
+        "Level 4 Earth Magic"
+      ],
+      "currentSkills": [
+        "Magic Aptitude: Fire",
+        "Magic Aptitude: Earth",
+        "Level 8 Fire Magic",
+        "Level 4 Earth Magic"
+      ],
+      "race": "Elf",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "7",
@@ -178,7 +212,32 @@
       "name": "Yoshino",
       "points": 145,
       "status": "Alive",
-      "note": "Party: Jade Wings"
+      "note": "Party: Jade Wings",
+      "purchasedSkills": [
+        "General Knowledge",
+        "Magic Aptitude: Light",
+        "Enhanced Mana Capacity",
+        "Level 2 Club Fighting",
+        "Level 2 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Level 7 Light Magic",
+        "Level 3 Pharmacy"
+      ],
+      "currentSkills": [
+        "General Knowledge",
+        "Magic Aptitude: Light",
+        "Enhanced Mana Capacity",
+        "Level 2 Club Fighting",
+        "Level 2 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Level 7 Light Magic",
+        "Level 3 Pharmacy"
+      ],
+      "race": "Human",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "8",
@@ -766,8 +825,8 @@
     },
     {
       "name": "Enhanced Mana Capacity",
-      "cost": 20,
-      "description": "",
+      "cost": 10,
+      "description": "Grants increased mana capacity.",
       "hidden_info": "",
       "has_levels": false
     },
@@ -864,14 +923,14 @@
     },
     {
       "name": "Disease Resistance",
-      "cost": 10,
+      "cost": 5,
       "description": "",
       "hidden_info": "",
       "has_levels": false
     },
     {
       "name": "Poison Resistance",
-      "cost": 10,
+      "cost": 5,
       "description": "",
       "hidden_info": "",
       "has_levels": false
@@ -892,7 +951,7 @@
     },
     {
       "name": "Pharmacy",
-      "cost": 5,
+      "cost": 10,
       "description": "",
       "hidden_info": "",
       "has_levels": true
@@ -907,6 +966,34 @@
     {
       "name": "Sneak",
       "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Club Fighting",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Weapon Proficiency: Greatswords",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Greatsword Fighting",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Peerless Strength",
+      "cost": 10,
       "description": "",
       "hidden_info": "",
       "has_levels": true
