@@ -8,7 +8,7 @@ export default function CreditsPage() {
 
                 <div style={{ marginBottom: '3rem' }}>
                     <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: 'hsl(var(--text-secondary))', marginBottom: '1rem' }}>
-                        This is a derivative fan work collecting information from the series in one place for us to argue over stats.
+                        This is a derivative fan work collecting information from the series in one place for us to toy with our own builds and compare to the characters.
                         All information is copyright of the original author, artist, and publishers.
                     </p>
                 </div>
