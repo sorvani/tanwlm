@@ -278,15 +278,21 @@ export default function BuilderClient({ races, skills }: BuilderClientProps) {
                                         </div>
 
                                         {skill.hidden_info && (
-                                            <div style={{
-                                                display: hasHelpGuide ? 'block' : 'none',
-                                                marginTop: '0.5rem',
-                                                paddingTop: '0.5rem',
-                                                borderTop: '1px dashed var(--border-color)',
-                                                color: 'hsl(var(--state-warning))',
-                                                fontSize: '0.85rem',
-                                                fontStyle: 'italic'
-                                            }}>
+                                            <div
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    if (!isSelected) handleSkillToggle(skill);
+                                                }}
+                                                style={{
+                                                    display: hasHelpGuide ? 'block' : 'none',
+                                                    marginTop: '0.5rem',
+                                                    paddingTop: '0.5rem',
+                                                    borderTop: '1px dashed var(--border-color)',
+                                                    color: 'hsl(var(--state-warning))',
+                                                    fontSize: '0.85rem',
+                                                    fontStyle: 'italic',
+                                                    cursor: !isSelected ? 'pointer' : 'default'
+                                                }}>
                                                 {skill.hidden_info}
                                             </div>
                                         )}

@@ -619,10 +619,52 @@
       "has_levels": false
     },
     {
+      "name": "Magic Aptitude: Earth",
+      "cost": 10,
+      "description": "You become able to learn Earth magic.",
+      "hidden_info": "Humans cannot learn Earth magic without this skill. Elves can learn Earth magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
+    },
+    {
+      "name": "Magic Aptitude: Fire",
+      "cost": 10,
+      "description": "You become able to learn Fire magic.",
+      "hidden_info": "Humans cannot learn Fire magic without this skill. Elves can learn Fire magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
+    },
+    {
+      "name": "Magic Aptitude: Light",
+      "cost": 10,
+      "description": "You become able to learn Light magic.",
+      "hidden_info": "Humans cannot learn Light magic without this skill. Elves can learn Light magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
+    },
+    {
       "name": "Magic Aptitude: Omni",
       "cost": 80,
       "description": "Grants you innate aptitude for learning all kinds and types of magic.",
       "hidden_info": "The difficulty of learning any and all magic will be greatly increased.",
+      "has_levels": false
+    },
+    {
+      "name": "Magic Aptitude: Time",
+      "cost": 15,
+      "description": "You become able to learn Time magic.",
+      "hidden_info": "Humans cannot learn Time magic without this skill. Elves can learn Time magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
+    },
+    {
+      "name": "Magic Aptitude: Water",
+      "cost": 10,
+      "description": "You become able to learn Water magic.",
+      "hidden_info": "Humans cannot learn Water magic without this skill. Elves can learn Water magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
+    },
+    {
+      "name": "Magic Aptitude: Wind",
+      "cost": 10,
+      "description": "You become able to learn Wind magic.",
+      "hidden_info": "Humans cannot learn Wind magic without this skill. Elves can learn Wind magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
       "has_levels": false
     },
     {
@@ -640,13 +682,6 @@
       "has_levels": false
     },
     {
-      "name": "Extremely Attractive Appearance",
-      "cost": 30,
-      "description": "You become the very description of perfect beauty. No one can resist your looks, including both the same and the opposite sex.",
-      "hidden_info": "Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf.",
-      "has_levels": false
-    },
-    {
       "name": "Robust",
       "cost": 10,
       "description": "Your body becomes much more resilient and durable.",
@@ -654,17 +689,17 @@
       "has_levels": true
     },
     {
-      "name": "Magic Aptitude: Fire",
-      "cost": 10,
-      "description": "You become able to learn Fire magic.",
-      "hidden_info": "Humans cannot learn Fire magic without this skill. Elves can learn Fire magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
-      "has_levels": false
-    },
-    {
       "name": "Attractive Appearance",
       "cost": 10,
       "description": "You gain a very attractive outward appearance.",
       "hidden_info": "Not recommended for Elves due to their natural beauty. Humans who are allured by appearance alone may cause trouble.",
+      "has_levels": false
+    },
+    {
+      "name": "Extremely Attractive Appearance",
+      "cost": 30,
+      "description": "You become the very description of perfect beauty. No one can resist your looks, including both the same and the opposite sex.",
+      "hidden_info": "Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf.",
       "has_levels": false
     },
     {
@@ -698,13 +733,6 @@
     {
       "name": "Weapon Proficiency: Spears",
       "cost": 10,
-      "description": "",
-      "hidden_info": "",
-      "has_levels": false
-    },
-    {
-      "name": "Magic Aptitude: Time",
-      "cost": 15,
       "description": "",
       "hidden_info": "",
       "has_levels": false
@@ -829,27 +857,6 @@
       "has_levels": false
     },
     {
-      "name": "Magic Aptitude: Light",
-      "cost": 10,
-      "description": "",
-      "hidden_info": "",
-      "has_levels": false
-    },
-    {
-      "name": "Magic Aptitude: Wind",
-      "cost": 10,
-      "description": "",
-      "hidden_info": "",
-      "has_levels": false
-    },
-    {
-      "name": "Magic Aptitude: Water",
-      "cost": 10,
-      "description": "",
-      "hidden_info": "",
-      "has_levels": false
-    },
-    {
       "name": "Enhanced Mana Capacity",
       "cost": 10,
       "description": "Grants increased mana capacity.",
@@ -932,13 +939,6 @@
       "description": "",
       "hidden_info": "",
       "has_levels": true
-    },
-    {
-      "name": "Magic Aptitude: Earth",
-      "cost": 10,
-      "description": "",
-      "hidden_info": "",
-      "has_levels": false
     },
     {
       "name": "Earth Magic",
