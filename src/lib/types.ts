@@ -25,6 +25,7 @@ export interface Race {
   name: string;
   cost: number;
   description?: string;
+  hidden_info?: string;
 }
 
 export interface GameData {

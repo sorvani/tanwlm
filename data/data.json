@@ -8,7 +8,55 @@
       "name": "Haruka",
       "points": 200,
       "status": "Alive",
-      "note": "Party: Meikyo Shisui"
+      "note": "Party: Meikyo Shisui",
+      "purchasedSkills": [
+        "Elf Race",
+        "Help Guide",
+        "Weapon Proficiency: Bows",
+        "Craft Aptitude: Alchemy",
+        "Magic Aptitude: Light",
+        "Magic Aptitude: Wind",
+        "Magic Aptitude: Water",
+        "Enhanced Mana Capacity",
+        "General Knowledge",
+        "Level 2 Archery",
+        "Level 2 Robust",
+        "Level 1 Throw",
+        "Level 2 Third Eye",
+        "Level 1 Disassemble",
+        "Level 3 Light Magic",
+        "Level 1 Wind Magic",
+        "Level 1 Water Magic",
+        "Level 1 Swiftcast",
+        "Level 1 Alchemy",
+        "Level 1 Sewing",
+        "Level 1 Cooking"
+      ],
+      "currentSkills": [
+        "Help Guide",
+        "Weapon Proficiency: Bows",
+        "Craft Aptitude: Alchemy",
+        "Magic Aptitude: Light",
+        "Magic Aptitude: Wind",
+        "Magic Aptitude: Water",
+        "Enhanced Mana Capacity",
+        "General Knowledge",
+        "Level 2 Archery",
+        "Level 2 Robust",
+        "Level 1 Throw",
+        "Level 2 Third Eye",
+        "Level 1 Disassemble",
+        "Level 3 Light Magic",
+        "Level 1 Wind Magic",
+        "Level 1 Water Magic",
+        "Level 1 Swiftcast",
+        "Level 1 Alchemy",
+        "Level 1 Sewing",
+        "Level 1 Cooking"
+      ],
+      "race": "Elf",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "2",
@@ -131,7 +179,33 @@
       "name": "Touya",
       "points": 120,
       "status": "Alive",
-      "note": "Party: Meikyo Shisui"
+      "note": "Party: Meikyo Shisui",
+      "purchasedSkills": [
+        "Beastman Race",
+        "Weapon Proficiency: Swords",
+        "Level 3 Swordsmanship",
+        "Level 1 Charge",
+        "Level 1 Roar",
+        "Level 2 Evasion",
+        "Level 4 Robust",
+        "Level 2 Fleetness",
+        "Level 2 Appraisal",
+        "Level 1 Blacksmithing"
+      ],
+      "currentSkills": [
+        "Weapon Proficiency: Swords",
+        "Level 3 Swordsmanship",
+        "Level 1 Charge",
+        "Level 1 Roar",
+        "Level 2 Evasion",
+        "Level 4 Robust",
+        "Level 2 Fleetness",
+        "Level 2 Appraisal",
+        "Level 1 Blacksmithing"
+      ],
+      "race": "Beastman",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "11",
@@ -221,7 +295,7 @@
       "name": "Plunder 1",
       "points": 0,
       "status": "Dead",
-      "note": "Sarstedt \u2013 Park (assumed boy)"
+      "note": "Sarstedt – Park (assumed boy)"
     },
     {
       "id": "20",
@@ -356,16 +430,22 @@
   ],
   "skills": [
     {
+      "name": "Help Guide",
+      "cost": 20,
+      "description": "Detailed explanations and advice will be displayed. Cannot be removed after purchase.",
+      "hidden_info": "Some explanations and advice will remain accessible for browsing after transport."
+    },
+    {
       "name": "Plunder",
       "cost": 80,
-      "description": "Steal target\u2019s skills. The levels of the stolen skills will remain the same they were originally. You do not need to designate which skill you want to steal. The stolen skill will be returned to its original owner upon the death of the user. (The user\u2019s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5.) This skill definitely seemed like a cheat skill at first glance, but it had a ridiculous drawback tagged on. Well, you are stealing the product of someone else\u2019s hard work and time with this, so I guess it\u2019s kind of fair that you have to give up your own \u201ctime\u201d in exchange?",
+      "description": "Steal target’s skills. The levels of the stolen skills will remain the same they were originally. You do not need to designate which skill you want to steal. The stolen skill will be returned to its original owner upon the death of the user. The user’s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5.",
       "hidden_info": ""
     },
     {
       "name": "Copy",
       "cost": 100,
-      "description": "Copy a skill from the target. Does not affect the target\u2019s skills. However, you must know both the name and level of the skill you want to copy. (The copied skill will be reduced to Level 1 and its status will be changed to Sealed. The status effect will be removed upon learning how to use the copied skill from its original user. Cannot copy skills that don\u2019t have a level.) There were no drawbacks for the copy target, so it made sense that the drawback for the user was not that severe either. You could use a copied skill at Level 1 right away if you actually got permission from the original owner. This might actually be a pretty decent skill.",
-      "hidden_info": ""
+      "description": "Copy a skill from the target. Does not affect the target’s skills. However, you must know both the name and level of the skill you want to copy.",
+      "hidden_info": "The copied skill will be reduced to Level 1 and its status will be changed to Sealed. The status effect will be removed upon learning how to use the copied skill from its original user. Cannot copy skills that don’t have a level."
     },
     {
       "name": "2x EXP",
@@ -406,14 +486,14 @@
     {
       "name": "Extremely Attractive Appearance",
       "cost": 30,
-      "description": "You become the very description of perfect beauty. No one can resist your looks, including both the same and the opposite sex. (Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf.) Ack! Based on the extra info, almost all of these skills are traps! Now that\u2019s more like it for an evil god! I mean, okay, he did say there weren\u2019t any cheat skills, and it was kind of suspicious that he casually added most of the requests, but still! I bet the guys that didn\u2019t get the Help Guide probably think some of these skills will make them invincible, but they\u2019re just gonna die, aren\u2019t they? Well, actually, I guess that only applies to the idiots that choose Plunder without thinking. All it would take for Plunder to kill the user instantly was for their target to have a combination of skills with levels that added up to at least 25. Each of the other skills was risky in its own way, but none of them could kill the user immediately. I didn\u2019t see any point in choosing the EXP skills, but given that they did cost points, perhaps there was some kind of secret gimmick behind them. All right, what about the skills that were already in here before the requests?",
-      "hidden_info": ""
+      "description": "You become the very description of perfect beauty. No one can resist your looks, including both the same and the opposite sex.",
+      "hidden_info": "Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf."
     },
     {
       "name": "Robust",
       "cost": 10,
       "description": "Your body becomes much more resilient and durable.",
-      "hidden_info": "You will become resistant to injury and diseases. However, this is a different world, so there may be pathogens that didn\u2019t exist in your previous world."
+      "hidden_info": "You will become resistant to injury and diseases. However, this is a different world, so there may be pathogens that didn’t exist in your previous world."
     },
     {
       "name": "Magic Aptitude: Fire",
@@ -436,26 +516,20 @@
     {
       "name": "Skin Lightening",
       "cost": 5,
-      "description": "Your skin will become much lighter than the average person\u2019s and remain lighter regardless of sun exposure. You will also become more resistant to sunburns.",
-      "hidden_info": "Due to a lack of skin pigment, you will become more vulnerable to UV damage even if you don\u2019t tan or burn visibly. Take care of your skin to avoid skin cancer."
+      "description": "Your skin will become much lighter than the average person’s and remain lighter regardless of sun exposure. You will also become more resistant to sunburns.",
+      "hidden_info": "Due to a lack of skin pigment, you will become more vulnerable to UV damage even if you don’t tan or burn visibly. Take care of your skin to avoid skin cancer."
     },
     {
       "name": "Drunkard",
       "cost": 5,
       "description": "You will find it difficult to become drunk.",
-      "hidden_info": "This doesn\u2019t affect the properties of the alcohol that you consume, so the effects of alcohol on your body remain the same. In fact, it\u2019s possible that you won\u2019t know when to stop because of this trait, so be careful of alcoholism and alcohol poisoning."
+      "hidden_info": "This doesn’t affect the properties of the alcohol that you consume, so the effects of alcohol on your body remain the same. In fact, it’s possible that you won’t know when to stop because of this trait, so be careful of alcoholism and alcohol poisoning."
     },
     {
       "name": "Swindle",
       "cost": 10,
-      "description": "You become a smooth talker and have a good chance at deceiving people with words alone. (All talk and no action will make others distrust you. If you want to establish long-term friendships, you will have to prove it with your actions.) These skills sound fairly reasonable, and the advice is sensible too. Actually, it\u2019s more like the other additional skills were straight-up awful. I\u2019ll just avoid the additional skills for the most part. Apart from the Help Guide, I think choosing the skills that were in this list from the beginning is the way to go. I hope I\u2019m right... These were the skills that I chose after an hour of thinking.",
-      "hidden_info": ""
-    },
-    {
-      "name": "Help Guide",
-      "cost": 20,
-      "description": "",
-      "hidden_info": ""
+      "description": "You become a smooth talker and have a good chance at deceiving people with words alone.",
+      "hidden_info": "All talk and no action will make others distrust you. If you want to establish long-term friendships, you will have to prove it with your actions."
     },
     {
       "name": "Weapon Proficiency: Spears",
@@ -488,7 +562,7 @@
       "hidden_info": ""
     },
     {
-      "name": "Level 1 Hawk\u2019s Eye",
+      "name": "Level 1 Hawk’s Eye",
       "cost": 5,
       "description": "",
       "hidden_info": ""
@@ -528,6 +602,156 @@
       "cost": 10,
       "description": "",
       "hidden_info": ""
+    },
+    {
+      "name": "Level 3 Swordsmanship",
+      "cost": 15,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Charge",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Roar",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 2 Evasion",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 4 Robust",
+      "cost": 25,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 2 Fleetness",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 2 Appraisal",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Blacksmithing",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Weapon Proficiency: Bows",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Craft Aptitude: Alchemy",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Magic Aptitude: Light",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Magic Aptitude: Wind",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Magic Aptitude: Water",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Enhanced Mana Capacity",
+      "cost": 20,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "General Knowledge",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 2 Archery",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Throw",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Disassemble",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 3 Light Magic",
+      "cost": 15,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Wind Magic",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Water Magic",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Swiftcast",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Alchemy",
+      "cost": 10,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Sewing",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
+    },
+    {
+      "name": "Level 1 Cooking",
+      "cost": 5,
+      "description": "",
+      "hidden_info": ""
     }
   ],
   "races": [
@@ -539,12 +763,17 @@
     {
       "name": "Elf",
       "cost": 20,
-      "description": "A race highly adept at magic, with a life span twice that of the average Human."
+      "description": "A race highly adept at magic, with a life span twice that of the average Human. (Can learn and use magic without expending additional points on magical aptitude, but has less physical strength than a Human.)"
     },
     {
       "name": "Dhamphir",
       "cost": 50,
-      "description": "A race of half-vampires endowed with strong and resilient bodies as well as an aptitude for magic."
+      "description": "A race of half-vampires endowed with strong and resilient bodies as well as an aptitude for magic. They possess an innate resistance towards light due to being half human. (Their lust for blood is stronger than that of pure-blooded vampires, and they thus require a daily sustenance of Human blood amounting to at least 400 cc. Most are unable to control their urges and end up draining the blood of their victims to the last drop. They are hunted down on sight due to the nature of their race.)"
+    },
+    {
+      "name": "Beastman",
+      "cost": 20,
+      "description": "A race with animal traits (e.g. Wolf), improving physical abilities and senses."
     }
   ]
 }

@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 export default async function RosterDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const { roster } = await getGameData();
+    const { roster, skills, races } = await getGameData();
     const student = roster.find((s) => s.id === id);
 
     if (!student) {
@@ -83,18 +83,55 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                     <div style={{ marginTop: '2rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
                         <h3 style={{ fontSize: '1.1rem', color: 'hsl(var(--accent-primary))', marginBottom: '1rem' }}>Purchased Race & Skills</h3>
                         {student.purchasedSkills && student.purchasedSkills.length > 0 ? (
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                {student.purchasedSkills.map((skill: string, index: number) => (
-                                    <span key={index} style={{
-                                        background: 'hsl(var(--bg-primary))',
-                                        padding: '0.25rem 0.75rem',
-                                        borderRadius: '4px',
-                                        fontSize: '0.9rem',
-                                        border: '1px solid var(--border-color)'
-                                    }}>
-                                        {skill}
-                                    </span>
-                                ))}
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+                                {student.purchasedSkills.map((itemName: string, index: number) => {
+                                    // Determine if student has "Help Guide" in CURRENT skills (or purchased, logic: usually current)
+                                    const hasHelpGuide = student.currentSkills?.includes("Help Guide") || student.purchasedSkills?.includes("Help Guide");
+
+                                    // Find item details in Races or Skills
+                                    const race = races.find(r => r.name === itemName);
+                                    const skill = skills.find(s => s.name === itemName);
+                                    const item = race || skill;
+
+                                    if (!item) {
+                                        // Fallback for items not found in DB
+                                        return (
+                                            <div key={index} className="card" style={{ background: 'hsl(var(--bg-secondary))', padding: '1rem' }}>
+                                                <h4 style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>{itemName}</h4>
+                                                <p style={{ color: 'hsl(var(--text-muted))', fontSize: '0.9rem' }}>Unknown item</p>
+                                            </div>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={index} className="card" style={{ background: 'hsl(var(--bg-secondary))', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                                                <h4 style={{ fontWeight: 'bold', fontSize: '1rem', color: 'hsl(var(--text-primary))' }}>{item.name}</h4>
+                                                <span style={{
+                                                    background: 'hsl(var(--bg-tertiary))',
+                                                    padding: '0.1rem 0.5rem',
+                                                    borderRadius: '4px',
+                                                    fontSize: '0.8rem',
+                                                    color: 'hsl(var(--text-secondary))',
+                                                    whiteSpace: 'nowrap'
+                                                }}>
+                                                    {item.cost} pts
+                                                </span>
+                                            </div>
+
+                                            <p style={{ fontSize: '0.9rem', color: 'hsl(var(--text-secondary))', marginBottom: '0.5rem', flex: 1 }}>
+                                                {item.description}
+                                            </p>
+
+                                            {/* Show Hidden Info if user has Help Guide AND hidden_info exists */}
+                                            {hasHelpGuide && 'hidden_info' in item && item.hidden_info && (
+                                                <p style={{ fontSize: '0.85rem', color: 'hsl(var(--accent-secondary))', marginTop: '0.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.5rem' }}>
+                                                    ({item.hidden_info})
+                                                </p>
+                                            )}
+                                        </div>
+                                    );
+                                })}
                             </div>
                         ) : (
                             <p style={{ color: 'hsl(var(--text-muted))', fontStyle: 'italic' }}>None recorded.</p>

@@ -30,9 +30,9 @@ export default async function SkillsPage() {
                             {skill.description || <em style={{ opacity: 0.5 }}>No description available</em>}
                         </p>
                         {skill.hidden_info && (
-                            <div style={{ marginTop: 'auto', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)', fontSize: '0.875rem', color: 'hsl(var(--text-muted))' }}>
-                                <span style={{ opacity: 0.7 }}>Hidden Info available</span>
-                            </div>
+                            <p style={{ fontSize: '0.9rem', color: 'hsl(var(--accent-secondary))', marginTop: '0.5rem' }}>
+                                ({skill.hidden_info})
+                            </p>
                         )}
 
                     </div>
