@@ -1,6 +1,9 @@
 import { getGameData } from '@/lib/data';
 import Link from 'next/link';
 
+// TODO: Optimize this for production later (e.g., ISR with revalidation) once data editing is stabilized.
+export const dynamic = 'force-dynamic';
+
 export default async function RosterPage() {
     const { roster } = await getGameData();
 
