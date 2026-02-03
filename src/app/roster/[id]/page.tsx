@@ -30,15 +30,36 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                         <div style={{ marginBottom: '0.25rem' }}>Race: {student.race || 'Unknown'} <span style={{ color: 'hsl(var(--text-secondary))' }}>(Age: {student.age || '?'})</span></div>
                         <div style={{ marginBottom: '1rem' }}>Condition: <span style={{ color: student.condition === 'Healthy' ? 'hsl(var(--state-success))' : 'inherit' }}>{student.condition || student.status}</span></div>
 
-                        <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-                            <span style={{ marginRight: '0.5rem', whiteSpace: 'nowrap' }}>Skills:</span>
-                            <div>
-                                {student.currentSkills && student.currentSkills.length > 0 ? (
-                                    <span>{student.currentSkills.join(', ')}</span>
-                                ) : (
-                                    <span style={{ color: 'hsl(var(--text-muted))' }}>None</span>
-                                )}
-                            </div>
+                        <div>
+                            {(() => {
+                                const skills = student.currentSkills || [];
+                                if (skills.length === 0) return <span style={{ color: 'hsl(var(--text-muted))' }}>Skills: None</span>;
+
+                                const MAX_WIDTH = 70; // Character width limit
+                                const lines: string[] = [];
+                                let currentLine = "Skills: ";
+
+                                skills.forEach((skill) => {
+                                    // Separator logic: if line is just "Skills: ", no comma. Otherwise ", "
+                                    const separator = (currentLine === "Skills: ") ? "" : ", ";
+                                    const predictedLength = currentLine.length + separator.length + skill.length;
+
+                                    if (predictedLength > MAX_WIDTH) {
+                                        // Push current completed line
+                                        lines.push(currentLine);
+                                        // Start new line with just this skill (no indentation as requested)
+                                        currentLine = skill;
+                                    } else {
+                                        currentLine += separator + skill;
+                                    }
+                                });
+                                // Push the final line
+                                if (currentLine) lines.push(currentLine);
+
+                                return lines.map((line, i) => (
+                                    <div key={i}>{line}</div>
+                                ));
+                            })()}
                         </div>
                     </div>
                 </div>
