@@ -85,16 +85,36 @@ Connect to your server via SSH:
     npm run build
     ```
 
-3.  **Start the Server**:
-    Since we are using `output: 'standalone'`, we run the generated server file directly.
+3.  **Start the Server (Systemd)**:
+    Create a service file to keep the app running in the background.
 
+    **Create the file:**
+    `sudo nano /etc/systemd/system/landmines.service`
+
+    **Content:**
+    ```ini
+    [Unit]
+    Description=Land Mines DB
+    After=network.target
+
+    [Service]
+    Type=simple
+    User=landmines
+    WorkingDirectory=/opt/landmines
+    ExecStart=/usr/bin/npm start
+    Restart=always
+    Environment=NODE_ENV=production
+    Environment=PORT=3000
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+    **Enable and Start:**
     ```bash
-    # Simple start (for testing)
-    node .next/standalone/server.js
-    
-    # OR with PM2 (Recommended for production)
-    pm2 start .next/standalone/server.js --name "landmines"
-    pm2 save
+    sudo systemctl daemon-reload
+    sudo systemctl enable --now landmines
+    sudo systemctl status landmines
     ```
     *The app will run on port 3000.*
 
@@ -117,7 +137,7 @@ cd /opt/landmines
 git pull
 npm install  # only if dependencies changed
 npm run build
-pm2 restart landmines
+sudo systemctl restart landmines
 ```
 
 ## 4. Expose to Web (Nginx)

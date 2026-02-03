@@ -54,11 +54,7 @@ export default function CreditsPage() {
                     </div>
                 </section>
 
-                <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid hsl(var(--glass-border))', fontSize: '0.9rem', color: 'hsl(var(--text-muted))' }}>
-                    <p>
-                        Design &copy; 2026 J. Busch.
-                    </p>
-                </div>
+
             </div>
         </div>
     );
