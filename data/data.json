@@ -438,8 +438,8 @@
     {
       "name": "Plunder",
       "cost": 80,
-      "description": "Steal target’s skills. The levels of the stolen skills will remain the same they were originally. You do not need to designate which skill you want to steal. The stolen skill will be returned to its original owner upon the death of the user. The user’s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5.",
-      "hidden_info": ""
+      "description": "Steal target’s skills. The levels of the stolen skills will remain the same they were originally. You do not need to designate which skill you want to steal. The stolen skill will be returned to its original owner upon the death of the user.",
+      "hidden_info": "The user’s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5."
     },
     {
       "name": "Copy",
