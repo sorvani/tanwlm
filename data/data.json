@@ -245,9 +245,22 @@
       "jp_family": "Takamatsu",
       "jp_given": "Satomi",
       "name": "Satomi",
-      "points": 100,
+      "points": 110,
       "status": "Alive",
-      "note": "Consultant of Aera, V11P8 handed over to Viscount Nernas"
+      "note": "Consultant of Aera, V11P8 handed over to Viscount Nernas, was charmed by Kaji and told what to ",
+      "purchasedSkills": [
+        "Extremely Attractive Appearance",
+        "Level 3 Singing",
+        "Level 3 Persuasion",
+        "Charm"
+      ],
+      "currentSkills": [
+        "Extremely Attractive Appearance",
+        "Level 3 Singing",
+        "Level 3 Persuasion",
+        "Charm"
+      ],
+      "race": "Human"
     },
     {
       "id": "9",
@@ -457,12 +470,13 @@
     {
       "id": "18",
       "sex": "Boy 10",
-      "jp_family": "Kaji",
-      "jp_given": "",
+      "jp_family": "",
+      "jp_given": "Kaji",
       "name": "Kaji",
       "points": 0,
+      "race": "Vampire",
       "status": "Dead",
-      "note": "Vampire in Pining - Volume 11 JNC Part 8"
+      "note": "Nao's Third Eye skill confirmed he was a vampire, and not a Dhampir. Pining - Volume 11 JNC Part 8"
     },
     {
       "id": "19",
@@ -1117,6 +1131,20 @@
       "description": "Maintains youthful appearance and vitality.",
       "hidden_info": "",
       "has_levels": false
+    },
+    {
+      "name": "Singing",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Persuasion",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
     }
   ],
   "races": [
