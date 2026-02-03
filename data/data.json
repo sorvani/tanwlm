@@ -462,7 +462,7 @@
       "name": "Kaji",
       "points": 0,
       "status": "Dead",
-      "note": "Vampire in Pining V11 P8"
+      "note": "Vampire in Pining - Volume 11 JNC Part 8"
     },
     {
       "id": "19",
@@ -472,7 +472,7 @@
       "name": "Plunder 1",
       "points": 0,
       "status": "Dead",
-      "note": "Sarstedt – Park (assumed boy)"
+      "note": "Sarstedt - Park (assumed boy)"
     },
     {
       "id": "20",
@@ -482,7 +482,7 @@
       "name": "Plunder 2",
       "points": 0,
       "status": "Dead",
-      "note": "Laffan Guild - Manga Chapter 7"
+      "note": "Laffan Guild - Manga Volume 1 Chapter 7"
     },
     {
       "id": "21",
@@ -492,7 +492,7 @@
       "name": "Plunder 3",
       "points": 0,
       "status": "Dead",
-      "note": "Laffan Guild - Manga Chapter 7"
+      "note": "Laffan Guild - Manga Volume 1 Chapter 7"
     },
     {
       "id": "22",
@@ -502,7 +502,7 @@
       "name": "Hashimoto",
       "points": 150,
       "status": "Alive",
-      "note": "Manga V2 C13",
+      "note": "Met outside Sarstedt in Manga Volume 2 Chapter 13.",
       "purchasedSkills": [
         "Heroic Aptitude",
         "Help Guide",
@@ -523,7 +523,7 @@
       "name": "Plunder 4",
       "points": 0,
       "status": "Dead",
-      "note": "Laffan"
+      "note": "Laffan - This is based on the comments in the story about more people falling over dead."
     },
     {
       "id": "24",
@@ -533,7 +533,7 @@
       "name": "Plunder 5",
       "points": 0,
       "status": "Dead",
-      "note": "Laffan"
+      "note": "Laffan - This is based on the comments in the story about more people falling over dead."
     },
     {
       "id": "25",
@@ -543,7 +543,7 @@
       "name": "Plunder 6",
       "points": 0,
       "status": "Dead",
-      "note": "Laffan"
+      "note": "Laffan - This is based on the comments in the story about more people falling over dead."
     },
     {
       "id": "26",
@@ -553,7 +553,7 @@
       "name": "Plunder 7",
       "points": 0,
       "status": "Dead",
-      "note": "Sarstedt"
+      "note": "Sarstedt - This is based on the comments in the story from Natsuki and Yuki about their leisurely walk around town."
     },
     {
       "id": "27",
@@ -563,7 +563,7 @@
       "name": "Plunder 8",
       "points": 0,
       "status": "Dead",
-      "note": "Sarstedt"
+      "note": "Sarstedt - This is based on the comments in the story from Natsuki and Yuki about their leisurely walk around town."
     },
     {
       "id": "28",
