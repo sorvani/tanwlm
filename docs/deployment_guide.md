@@ -105,6 +105,10 @@ Connect to your server via SSH:
     Restart=always
     Environment=NODE_ENV=production
     Environment=PORT=3000
+    # Authentication (Generate a secret with: openssl rand -base64 32)
+    Environment=AUTH_SECRET=changeme_to_random_string
+    Environment=AUTH_GOOGLE_ID=your_client_id_here
+    Environment=AUTH_GOOGLE_SECRET=your_client_secret_here
 
     [Install]
     WantedBy=multi-user.target

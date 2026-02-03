@@ -18,11 +18,15 @@ export const metadata: Metadata = {
   description: "Character tracker and builder for To Another World... with Land Mines!",
 };
 
-export default function RootLayout({
+import { auth, signIn, signOut } from "../../auth";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
@@ -37,6 +41,31 @@ export default function RootLayout({
                   <li><Link href="/roster">Roster</Link></li>
                   <li><Link href="/skills">Skills</Link></li>
                   <li><Link href="/builder">Builder</Link></li>
+                  <li>
+                    {session ? (
+                      <form
+                        action={async () => {
+                          "use server";
+                          await signOut();
+                        }}
+                      >
+                        <button type="submit" style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', font: 'inherit', fontWeight: 500 }}>
+                          Logout
+                        </button>
+                      </form>
+                    ) : (
+                      <form
+                        action={async () => {
+                          "use server";
+                          await signIn("google");
+                        }}
+                      >
+                        <button type="submit" style={{ background: 'none', border: 'none', color: 'hsl(var(--accent-primary))', cursor: 'pointer', font: 'inherit', fontWeight: 500 }}>
+                          Login
+                        </button>
+                      </form>
+                    )}
+                  </li>
                 </ul>
               </nav>
             </div>
