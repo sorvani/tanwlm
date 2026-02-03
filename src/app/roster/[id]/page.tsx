@@ -88,9 +88,18 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                                     // Determine if student has "Help Guide" in CURRENT skills (or purchased, logic: usually current)
                                     const hasHelpGuide = student.currentSkills?.includes("Help Guide") || student.purchasedSkills?.includes("Help Guide");
 
+                                    // Parse Level if present (e.g. "Level 2 Spearmanship")
+                                    let queryName = itemName;
+                                    let level: number | null = null;
+                                    const levelMatch = itemName.match(/^Level (\d+) (.+)$/);
+                                    if (levelMatch) {
+                                        level = parseInt(levelMatch[1]);
+                                        queryName = levelMatch[2];
+                                    }
+
                                     // Find item details in Races or Skills
-                                    const race = races.find(r => r.name === itemName);
-                                    const skill = skills.find(s => s.name === itemName);
+                                    const race = races.find(r => r.name === queryName);
+                                    const skill = skills.find(s => s.name === queryName);
                                     const item = race || skill;
 
                                     if (!item) {
@@ -103,10 +112,23 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                                         );
                                     }
 
+                                    // Calculate Cost
+                                    let totalCost = item.cost;
+                                    if (level && level > 1 && 'has_levels' in item && item.has_levels) {
+                                        for (let l = 2; l <= level; l++) {
+                                            if (l <= 3) totalCost += 5;
+                                            else if (l <= 5) totalCost += 10;
+                                            else if (l <= 7) totalCost += 15;
+                                            else if (l <= 9) totalCost += 20;
+                                            else if (l === 10) totalCost += 25;
+                                            else totalCost += 25;
+                                        }
+                                    }
+
                                     return (
                                         <div key={index} className="card" style={{ background: 'hsl(var(--bg-secondary))', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                                                <h4 style={{ fontWeight: 'bold', fontSize: '1rem', color: 'hsl(var(--text-primary))' }}>{item.name}</h4>
+                                                <h4 style={{ fontWeight: 'bold', fontSize: '1rem', color: 'hsl(var(--text-primary))' }}>{itemName}</h4>
                                                 <span style={{
                                                     background: 'hsl(var(--bg-tertiary))',
                                                     padding: '0.1rem 0.5rem',
@@ -115,7 +137,7 @@ export default async function RosterDetailPage({ params }: { params: Promise<{ i
                                                     color: 'hsl(var(--text-secondary))',
                                                     whiteSpace: 'nowrap'
                                                 }}>
-                                                    {item.cost} pts
+                                                    {totalCost} pts
                                                 </span>
                                             </div>
 

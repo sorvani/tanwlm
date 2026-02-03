@@ -362,11 +362,37 @@
       "id": "14",
       "sex": "Boy 6",
       "jp_family": "",
-      "jp_given": "Sai",
+      "jp_given": "Masaru",
       "name": "Sai",
-      "points": 0,
+      "points": 150,
       "status": "Alive",
-      "note": "Party with Estelle"
+      "note": "Party with Estelle",
+      "purchasedSkills": [
+        "Magic Aptitude: Water",
+        "Healthiness",
+        "Longevity",
+        "Youth",
+        "Level 2 Spearmanship",
+        "Level 3 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Level 2 Water Magic",
+        "Super Wealth"
+      ],
+      "currentSkills": [
+        "Magic Aptitude: Water",
+        "Healthiness",
+        "Longevity",
+        "Youth",
+        "Level 2 Spearmanship",
+        "Level 3 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Level 2 Water Magic"
+      ],
+      "race": "Human",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "15",
@@ -997,6 +1023,41 @@
       "description": "",
       "hidden_info": "",
       "has_levels": true
+    },
+    {
+      "name": "Wealth",
+      "cost": 5,
+      "description": "Multiply your monetary assets by five.",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Super Wealth",
+      "cost": 10,
+      "description": "Multiply your monetary assets by twenty.",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Healthiness",
+      "cost": 10,
+      "description": "Maintains good health.",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Longevity",
+      "cost": 10,
+      "description": "Extends natural lifespan.",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Youth",
+      "cost": 10,
+      "description": "Maintains youthful appearance and vitality.",
+      "hidden_info": "",
+      "has_levels": false
     }
   ],
   "races": [
