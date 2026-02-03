@@ -19,7 +19,7 @@ export default async function Home() {
           & Character Simulator
         </h2>
         <p style={{ fontSize: '1.25rem', color: 'hsl(var(--text-secondary))', maxWidth: '600px', margin: '0 auto' }}>
-          The comprehensive character tracker and builder for<br />
+          A comprehensive character tracker and builder for<br />
           <em>To Another World... with Land Mines!</em>
         </p>
       </section>
