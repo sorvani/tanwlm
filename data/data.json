@@ -66,7 +66,44 @@
       "name": "Natsuki",
       "points": 215,
       "status": "Alive",
-      "note": "Party: Meikyo Shisui"
+      "note": "Party: Meikyo Shisui",
+      "purchasedSkills": [
+        "Help Guide",
+        "Level 4 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Night Vision",
+        "Weapon Proficiency: Spears",
+        "Level 4 Spearmanship",
+        "Level 1 Light Magic",
+        "Magic Aptitude: Light",
+        "Level 1 Throw",
+        "Level 3 Martial Arts",
+        "Level 3 Pharmacy",
+        "Level 1 Traps and Snares 101",
+        "Level 2 Lock Picking",
+        "Level 2 Sneak"
+      ],
+      "currentSkills": [
+        "Help Guide",
+        "Level 4 Robust",
+        "Disease Resistance",
+        "Poison Resistance",
+        "Night Vision",
+        "Weapon Proficiency: Spears",
+        "Level 4 Spearmanship",
+        "Level 1 Light Magic",
+        "Magic Aptitude: Light",
+        "Level 1 Throw",
+        "Level 3 Martial Arts",
+        "Level 3 Pharmacy",
+        "Level 1 Traps and Snares 101",
+        "Level 2 Lock Picking",
+        "Level 2 Sneak"
+      ],
+      "race": "Human",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "3",
@@ -76,7 +113,32 @@
       "name": "Yuki",
       "points": 215,
       "status": "Alive",
-      "note": "Party: Meikyo Shisui"
+      "note": "Party: Meikyo Shisui",
+      "purchasedSkills": [
+        "Copy",
+        "General Knowledge",
+        "Magic Aptitude: Earth",
+        "Magic Aptitude: Fire",
+        "Magic Aptitude: Water",
+        "Magic Aptitude: Time",
+        "Level 1 Earth Magic",
+        "Level 1 Robust",
+        "Level 1 Third Eye"
+      ],
+      "currentSkills": [
+        "Copy",
+        "General Knowledge",
+        "Magic Aptitude: Earth",
+        "Magic Aptitude: Fire",
+        "Magic Aptitude: Water",
+        "Magic Aptitude: Time",
+        "Level 1 Earth Magic",
+        "Level 1 Robust",
+        "Level 1 Third Eye"
+      ],
+      "race": "Human",
+      "age": 17,
+      "condition": "Healthy"
     },
     {
       "id": "4",
@@ -433,325 +495,421 @@
       "name": "Help Guide",
       "cost": 20,
       "description": "Detailed explanations and advice will be displayed. Cannot be removed after purchase.",
-      "hidden_info": "Some explanations and advice will remain accessible for browsing after transport."
+      "hidden_info": "Some explanations and advice will remain accessible for browsing after transport.",
+      "has_levels": false
     },
     {
       "name": "Plunder",
       "cost": 80,
       "description": "Steal target’s skills. The levels of the stolen skills will remain the same they were originally. You do not need to designate which skill you want to steal. The stolen skill will be returned to its original owner upon the death of the user.",
-      "hidden_info": "The user’s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5."
+      "hidden_info": "The user’s life span will be reduced by 4% x the level of the stolen skills, and that total amount will be transferred to the target. This formula treats skills without levels as Level 5.",
+      "has_levels": false
     },
     {
       "name": "Copy",
       "cost": 100,
       "description": "Copy a skill from the target. Does not affect the target’s skills. However, you must know both the name and level of the skill you want to copy.",
-      "hidden_info": "The copied skill will be reduced to Level 1 and its status will be changed to Sealed. The status effect will be removed upon learning how to use the copied skill from its original user. Cannot copy skills that don’t have a level."
+      "hidden_info": "The copied skill will be reduced to Level 1 and its status will be changed to Sealed. The status effect will be removed upon learning how to use the copied skill from its original user. Cannot copy skills that don’t have a level.",
+      "has_levels": false
     },
     {
       "name": "2x EXP",
       "cost": 50,
       "description": "Experience gained from combat and training is doubled.",
-      "hidden_info": "The number of Experience Points required to level up will be increased tenfold."
+      "hidden_info": "The number of Experience Points required to level up will be increased tenfold.",
+      "has_levels": false
     },
     {
       "name": "10x EXP",
       "cost": 120,
       "description": "Experience gained from combat and training is increased tenfold.",
-      "hidden_info": "The number of Experience Points required to level up will be increased tenfold."
+      "hidden_info": "The number of Experience Points required to level up will be increased tenfold.",
+      "has_levels": false
     },
     {
       "name": "Heroic Aptitude",
       "cost": 80,
       "description": "Grants you the innate aptitude to become a Hero through training and effort.",
-      "hidden_info": "Your chances of getting involved in trouble are increased, and you will often end up in life-threatening situations."
+      "hidden_info": "Your chances of getting involved in trouble are increased, and you will often end up in life-threatening situations.",
+      "has_levels": false
     },
     {
       "name": "Magic Aptitude: Omni",
       "cost": 80,
       "description": "Grants you innate aptitude for learning all kinds and types of magic.",
-      "hidden_info": "The difficulty of learning any and all magic will be greatly increased."
+      "hidden_info": "The difficulty of learning any and all magic will be greatly increased.",
+      "has_levels": false
     },
     {
       "name": "Mana Capacity: Ultimate",
       "cost": 80,
       "description": "Grants you an overwhelming amount of mana.",
-      "hidden_info": "Your physical strength and endurance will be greatly reduced. Controlling your mana will also become very difficult."
+      "hidden_info": "Your physical strength and endurance will be greatly reduced. Controlling your mana will also become very difficult.",
+      "has_levels": false
     },
     {
       "name": "Charm",
       "cost": 50,
       "description": "You become very alluring to the opposite sex and mesmerize them. Your outward appearance will not change.",
-      "hidden_info": "Targets under the influence of Charm will become very controlling and possessive and will want to keep you to themselves. You are unable to designate a target for this skill."
+      "hidden_info": "Targets under the influence of Charm will become very controlling and possessive and will want to keep you to themselves. You are unable to designate a target for this skill.",
+      "has_levels": false
     },
     {
       "name": "Extremely Attractive Appearance",
       "cost": 30,
       "description": "You become the very description of perfect beauty. No one can resist your looks, including both the same and the opposite sex.",
-      "hidden_info": "Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf."
+      "hidden_info": "Useful for those pursuing a same-sex relationship. This skill is extremely dangerous if chosen by an Elf, however, due to their natural beauty, so it is recommended that you avoid this skill if you are an Elf.",
+      "has_levels": false
     },
     {
       "name": "Robust",
       "cost": 10,
       "description": "Your body becomes much more resilient and durable.",
-      "hidden_info": "You will become resistant to injury and diseases. However, this is a different world, so there may be pathogens that didn’t exist in your previous world."
+      "hidden_info": "You will become resistant to injury and diseases. However, this is a different world, so there may be pathogens that didn’t exist in your previous world.",
+      "has_levels": true
     },
     {
       "name": "Magic Aptitude: Fire",
       "cost": 10,
       "description": "You become able to learn Fire magic.",
-      "hidden_info": "Humans cannot learn Fire magic without this skill. Elves can learn Fire magic even without this skill, but acquiring this skill will allow them to use stronger magic."
+      "hidden_info": "Humans cannot learn Fire magic without this skill. Elves can learn Fire magic even without this skill, but acquiring this skill will allow them to use stronger magic.",
+      "has_levels": false
     },
     {
       "name": "Attractive Appearance",
       "cost": 10,
       "description": "You gain a very attractive outward appearance.",
-      "hidden_info": "Not recommended for Elves due to their natural beauty. Humans who are allured by appearance alone may cause trouble."
+      "hidden_info": "Not recommended for Elves due to their natural beauty. Humans who are allured by appearance alone may cause trouble.",
+      "has_levels": false
     },
     {
       "name": "Weapon Proficiency: Swords",
       "cost": 10,
       "description": "You have much more innate talent for wielding swords than the average person.",
-      "hidden_info": "Training is required to make use of the potential granted by this skill. Make sure not to be overconfident."
+      "hidden_info": "Training is required to make use of the potential granted by this skill. Make sure not to be overconfident.",
+      "has_levels": false
     },
     {
       "name": "Skin Lightening",
       "cost": 5,
       "description": "Your skin will become much lighter than the average person’s and remain lighter regardless of sun exposure. You will also become more resistant to sunburns.",
-      "hidden_info": "Due to a lack of skin pigment, you will become more vulnerable to UV damage even if you don’t tan or burn visibly. Take care of your skin to avoid skin cancer."
+      "hidden_info": "Due to a lack of skin pigment, you will become more vulnerable to UV damage even if you don’t tan or burn visibly. Take care of your skin to avoid skin cancer.",
+      "has_levels": false
     },
     {
       "name": "Drunkard",
       "cost": 5,
       "description": "You will find it difficult to become drunk.",
-      "hidden_info": "This doesn’t affect the properties of the alcohol that you consume, so the effects of alcohol on your body remain the same. In fact, it’s possible that you won’t know when to stop because of this trait, so be careful of alcoholism and alcohol poisoning."
+      "hidden_info": "This doesn’t affect the properties of the alcohol that you consume, so the effects of alcohol on your body remain the same. In fact, it’s possible that you won’t know when to stop because of this trait, so be careful of alcoholism and alcohol poisoning.",
+      "has_levels": false
     },
     {
       "name": "Swindle",
       "cost": 10,
       "description": "You become a smooth talker and have a good chance at deceiving people with words alone.",
-      "hidden_info": "All talk and no action will make others distrust you. If you want to establish long-term friendships, you will have to prove it with your actions."
+      "hidden_info": "All talk and no action will make others distrust you. If you want to establish long-term friendships, you will have to prove it with your actions.",
+      "has_levels": false
     },
     {
       "name": "Weapon Proficiency: Spears",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Magic Aptitude: Time",
       "cost": 15,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
-      "name": "Level 2 Spearmanship",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Evasion",
+      "name": "Spearmanship",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 2 Robust",
-      "cost": 15,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Hawk’s Eye",
+      "name": "Evasion",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Stealth",
+      "name": "Hawk’s Eye",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Traps and Snares 101",
+      "name": "Stealth",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Scout",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 2 Third Eye",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Fire Magic",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 2 Time Magic",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 3 Swordsmanship",
-      "cost": 15,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Charge",
+      "name": "Traps and Snares 101",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Roar",
+      "name": "Scout",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Third Eye",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 2 Evasion",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 4 Robust",
-      "cost": 25,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 2 Fleetness",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 2 Appraisal",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Blacksmithing",
+      "name": "Fire Magic",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Time Magic",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Swordsmanship",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Charge",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Roar",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Fleetness",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Appraisal",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Blacksmithing",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
     },
     {
       "name": "Weapon Proficiency: Bows",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Craft Aptitude: Alchemy",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Magic Aptitude: Light",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Magic Aptitude: Wind",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Magic Aptitude: Water",
       "cost": 10,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "Enhanced Mana Capacity",
       "cost": 20,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
       "name": "General Knowledge",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": false
     },
     {
-      "name": "Level 2 Archery",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Throw",
+      "name": "Archery",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Disassemble",
+      "name": "Throw",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 3 Light Magic",
-      "cost": 15,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Wind Magic",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Water Magic",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Swiftcast",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Alchemy",
-      "cost": 10,
-      "description": "",
-      "hidden_info": ""
-    },
-    {
-      "name": "Level 1 Sewing",
+      "name": "Disassemble",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
     },
     {
-      "name": "Level 1 Cooking",
+      "name": "Light Magic",
       "cost": 5,
       "description": "",
-      "hidden_info": ""
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Wind Magic",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Water Magic",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Swiftcast",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Alchemy",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Sewing",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Cooking",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Magic Aptitude: Earth",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Earth Magic",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Disease Resistance",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Poison Resistance",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Night Vision",
+      "cost": 10,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": false
+    },
+    {
+      "name": "Martial Arts",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Pharmacy",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Lock Picking",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
+    },
+    {
+      "name": "Sneak",
+      "cost": 5,
+      "description": "",
+      "hidden_info": "",
+      "has_levels": true
     }
   ],
   "races": [

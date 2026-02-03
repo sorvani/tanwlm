@@ -19,6 +19,7 @@ export interface Skill {
   cost: number;
   description: string;
   hidden_info?: string;
+  has_levels?: boolean;
 }
 
 export interface Race {
