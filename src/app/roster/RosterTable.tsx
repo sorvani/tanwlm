@@ -2,6 +2,7 @@
 
 import { Character } from '@/lib/types';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 interface RosterTableProps {
     roster: Character[];
@@ -9,24 +10,68 @@ interface RosterTableProps {
 
 export default function RosterTable({ roster }: RosterTableProps) {
     const router = useRouter();
+    const [sortConfig, setSortConfig] = useState<{ key: keyof Character; direction: 'asc' | 'desc' } | null>(null);
+
+    const sortedRoster = [...roster].sort((a, b) => {
+        if (!sortConfig) return 0;
+
+        let aValue = a[sortConfig.key];
+        let bValue = b[sortConfig.key];
+
+        // Handle numeric conversion for ID or Points if they are strings but represent numbers
+        if (sortConfig.key === 'id') {
+            return sortConfig.direction === 'asc'
+                ? parseInt(a.id) - parseInt(b.id) // ID is string in type but represents number
+                : parseInt(b.id) - parseInt(a.id);
+        }
+
+        if (sortConfig.key === 'points') {
+            // Points can be number or string types in DB sometimes
+            const aNum = Number(aValue) || 0;
+            const bNum = Number(bValue) || 0;
+            return sortConfig.direction === 'asc' ? aNum - bNum : bNum - aNum;
+        }
+
+        // Generic String comparison
+        if (typeof aValue === 'string' && typeof bValue === 'string') {
+            return sortConfig.direction === 'asc'
+                ? aValue.localeCompare(bValue)
+                : bValue.localeCompare(aValue);
+        }
+
+        return 0;
+    });
+
+    const requestSort = (key: keyof Character) => {
+        let direction: 'asc' | 'desc' = 'asc';
+        if (sortConfig && sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({ key, direction });
+    };
+
+    const getSortIndicator = (key: keyof Character) => {
+        if (!sortConfig || sortConfig.key !== key) return null;
+        return sortConfig.direction === 'asc' ? ' ↑' : ' ↓';
+    };
 
     return (
         <div className="glass-panel" style={{ overflowX: 'auto', borderRadius: 'var(--radius-lg)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', borderRadius: 'inherit' }}>
                 <thead>
                     <tr style={{ borderBottom: '1px solid var(--border-color)', textAlign: 'left' }}>
-                        <th style={{ padding: '1rem' }}>#</th>
-                        <th style={{ padding: '1rem' }}>Name</th>
-                        <th style={{ padding: '1rem' }}>Points</th>
-                        <th style={{ padding: '1rem' }}>Family Name (JP)</th>
-                        <th style={{ padding: '1rem' }}>Given Name (JP)</th>
-                        <th style={{ padding: '1rem' }}>Girl/Boy</th>
-                        <th style={{ padding: '1rem' }}>Status</th>
-                        <th style={{ padding: '1rem' }}>Note</th>
+                        <th onClick={() => requestSort('id')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}># {getSortIndicator('id')}</th>
+                        <th onClick={() => requestSort('name')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Name {getSortIndicator('name')}</th>
+                        <th onClick={() => requestSort('points')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Points {getSortIndicator('points')}</th>
+                        <th onClick={() => requestSort('jp_family')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Family Name (JP) {getSortIndicator('jp_family')}</th>
+                        <th onClick={() => requestSort('jp_given')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Given Name (JP) {getSortIndicator('jp_given')}</th>
+                        <th onClick={() => requestSort('sex')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Girl/Boy {getSortIndicator('sex')}</th>
+                        <th onClick={() => requestSort('status')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Status {getSortIndicator('status')}</th>
+                        <th onClick={() => requestSort('note')} style={{ padding: '1rem', cursor: 'pointer', userSelect: 'none' }}>Note {getSortIndicator('note')}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {roster.map((student) => (
+                    {sortedRoster.map((student) => (
                         <tr
                             key={student.id}
                             onClick={() => router.push(`/roster/${student.id}`)}
