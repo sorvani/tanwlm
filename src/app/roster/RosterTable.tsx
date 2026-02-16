@@ -32,6 +32,34 @@ export default function RosterTable({ roster }: RosterTableProps) {
             return sortConfig.direction === 'asc' ? aNum - bNum : bNum - aNum;
         }
 
+        if (sortConfig.key === 'sex') {
+            const parseSex = (val: any) => {
+                const s = String(val || '');
+                // Match "Boy 1", "Girl 10", etc.
+                // Capture the text prefix and the number.
+                const match = s.match(/^([^\d]+?)(\d+)$/);
+
+                if (match) {
+                    // trim() to ensure "Boy " behaves same as "Boy" if needed, 
+                    // though usually we want to distinguish.
+                    return { text: match[1].trim(), num: parseInt(match[2], 10) };
+                }
+                return { text: s, num: -Infinity };
+            };
+
+            const aP = parseSex(aValue);
+            const bP = parseSex(bValue);
+
+            const textCompare = aP.text.localeCompare(bP.text);
+            if (textCompare !== 0) {
+                return sortConfig.direction === 'asc' ? textCompare : -textCompare;
+            }
+
+            return sortConfig.direction === 'asc'
+                ? aP.num - bP.num
+                : bP.num - aP.num;
+        }
+
         // Generic String comparison
         if (typeof aValue === 'string' && typeof bValue === 'string') {
             return sortConfig.direction === 'asc'
